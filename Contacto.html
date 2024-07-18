@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+         <header>
+        <div class="container">
+            <img src="logo.jpg" alt="F:\2024\Programacion\HTML\Emprendi_2">
+            <h1>Contactanos</h1>
+        </div>
+         </header>
+        
+         <section id="contacto">
+            <h2>Contacto</h2>
+            <p style="color:blue">¿Tienes alguna pregunta o sugerencia? Contáctanos y estaremos encantados de atenderte.</p>
+            <p>Dirección: Calle Principal, Ciudad Rápida, CP 12345</p>
+            <p>Teléfono: +506 86310961</p>
+            <p>Correo Electrónico: info@snacktopia.com</p>
+            
+             <!-- Contenedor del mapa -->
+    <div id="map"></div>
+
+    <script>
+        // Función para inicializar y mostrar el mapa
+        function initMap() {
+            // Coordenadas del CTP Vázquez de Coronado
+            var ctpVazquezDeCoronado = { lat: 9.9678, lng: -84.0422 };
+
+            // Crear un nuevo mapa en el elemento con id="map"
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15, // Nivel de zoom inicial
+                center: ctpVazquezDeCoronado // Coordenadas del centro del mapa
+            });
+
+            // Marcador del CTP Vázquez de Coronado
+            var marker = new google.maps.Marker({
+                position: ctpVazquezDeCoronado,
+                map: map,
+                title: 'Colegio Técnico Profesional Vázquez de Coronado'
+            });
+        }
+    </script>
+    <!-- Incluir la API de Google Maps con tu API Key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+        </section>
+</html>
